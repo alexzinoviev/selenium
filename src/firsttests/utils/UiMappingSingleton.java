@@ -98,6 +98,7 @@ public class UiMappingSingleton {
         }
     }
 
+
     public static String uiStr(String key) {
         String[] partsOfLocators = uiMapping.get(key).split("\"");
         String locatorValue = partsOfLocators[1];
