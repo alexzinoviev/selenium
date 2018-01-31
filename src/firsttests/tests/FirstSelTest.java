@@ -1,6 +1,7 @@
 package firsttests.tests;
 
 import firsttests.pages.*;
+import firsttests.utils.UiMappingSingleton;
 import firsttests.utils.WebElementActions;
 import org.junit.After;
 import org.junit.Before;
@@ -18,9 +19,7 @@ public class FirstSelTest {
     private WebElementActions web;
     private String baseUrl;
     private StringBuffer verificationErrors = new StringBuffer();
-    private String INCORRECT_LOGIN_ERROR = "  Имя пользователя и пароль не совпадают или у вас ещё нет учётной " +
-            "записи на сайте";
-    private String EMPTY_LOGIN_ERROR = "  Пустой пароль не допускается";
+
 
 
     @Before // называется фикстура
@@ -30,6 +29,7 @@ public class FirstSelTest {
         web = new WebElementActions(driver);
         baseUrl = "http://magento-demo.lexiconn.com";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        UiMappingSingleton.getInstance();
     }
 
 //

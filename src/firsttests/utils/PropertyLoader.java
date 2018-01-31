@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class PropertyLoader {
 
-    private static final String PROPERTY_FILE = "/application.properties";
+    private static final String PROPERTY_FILE = "application.properties";
 
     public static String loadProperty(String name) throws IOException {
         Properties props = new Properties();

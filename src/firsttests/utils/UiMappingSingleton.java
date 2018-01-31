@@ -76,7 +76,7 @@ public class UiMappingSingleton {
      */
     public static By ui(String key) {
         String[] partsOfLocators = uiMapping.get(key).split("\"");
-        String locatorType = partsOfLocators[0].substring(0, partsOfLocators[0].length() - 1);
+        String locatorType = partsOfLocators[0];
         String locatorValue = partsOfLocators[1];
 
         if (locatorType.equals("xpath")){
@@ -97,7 +97,6 @@ public class UiMappingSingleton {
             }
         }
     }
-
 
     public static String uiStr(String key) {
         String[] partsOfLocators = uiMapping.get(key).split("\"");
