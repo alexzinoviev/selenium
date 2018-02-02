@@ -19,6 +19,7 @@ public class TestSuit {
         System.out.println("Here need to add run of browser etc");
     }
 
+
     @AfterClass
     public static void suitTearDown() {
         System.out.println("here need to add quit from browser");
